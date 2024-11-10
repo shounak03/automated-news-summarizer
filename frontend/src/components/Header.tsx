@@ -15,9 +15,9 @@ function Header() {
                     <Link to="/about" className="text-white hover:text-purple-400 transition-colors">
                         About
                     </Link>
-                    <Link to="https://github.com/shounak03/automated-news-summarizer" className="text-white hover:text-purple-400 transition-colors">
+                    <a href="https://github.com/shounak03/automated-news-summarizer" target="_blank" rel="noopener noreferrer" className="text-white hover:text-purple-400 transition-colors">
                         Github
-                    </Link>
+                    </a>
                 </div>
             </div>
         </nav>

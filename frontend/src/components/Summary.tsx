@@ -63,6 +63,8 @@ export default function Summary() {
       if (!res.ok) throw new Error('Failed to fetch content');
       
       const content = await res.json();
+      console.log(content);
+      
       setData(content);
     } catch (error) {
       setError(error instanceof Error ? error.message : 'Failed to fetch content');

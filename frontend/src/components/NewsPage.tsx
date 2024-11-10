@@ -38,7 +38,6 @@ export default function NewsDisplay() {
             const res = await fetch(`http://127.0.0.1:8000/api/top-headlines`)
             const data = await res.json()
             console.log(data);
-    
             setData(data.articles)
         } catch (error) {
             console.log(error);
