@@ -5,6 +5,7 @@ import logging
 
 
 class ArticleScraper:
+    
     def __init__(self):
         self.headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
@@ -123,7 +124,7 @@ class ArticleScraper:
                 content = '\n\n'.join(
                     elem.get_text().strip()
                     for elem in elements
-                    if elem.get_text().strip() and len(elem.get_text().strip()) > 20  # Filter out short elements
+                    if elem.get_text().strip() and len(elem.get_text().strip()) > 20 
                 )
                 if content:
                     article_data['content'] = content

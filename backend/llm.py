@@ -2,20 +2,16 @@ from llama_index.core import SimpleDirectoryReader
 from llama_index.core import SummaryIndex
 from llama_index.llms.groq import Groq
 from llama_index.core.node_parser import SentenceSplitter
-from llama_index.core import Document
 from llama_index.core import Settings
-# from llama_index.embeddings.huggingface import HuggingFaceEmbedding
-import nest_asyncio
+
 import os
 from dotenv import load_dotenv
 import tempfile 
 
 load_dotenv()
 API_KEY = os.getenv("API_KEY")
-
 llm = Groq(model="llama-3.1-8b-instant",api_key=API_KEY)
 Settings.llm = llm
-# Settings.embed_model = HuggingFaceEmbedding()
 
 class Summarizer:
 
