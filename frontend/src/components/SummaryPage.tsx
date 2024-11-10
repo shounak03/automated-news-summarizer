@@ -40,14 +40,14 @@ const SummaryPage = () => {
     }
 
 
-useEffect(() => {
-    getContent();
-    summarize();
-},  [getContent,summarize]);
+// useEffect(() => {
+//     getContent();
+//     summarize();
+// },  [getContent,summarize]);
 
   return (
     <div className='flex flex-col items-center justify-center '>
-      <h1>Summary Page</h1>
+      <h1>Summary Page {url}</h1>
       <button onClick={getContent}  className='text-4xl text-blue-800'>Content</button>
       <h1 className='text-4xl text-blue-800'>{data.title}</h1>
       <p>{data.content}</p>
