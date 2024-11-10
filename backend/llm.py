@@ -1,10 +1,9 @@
+import os
 from llama_index.core import SimpleDirectoryReader
 from llama_index.core import SummaryIndex
 from llama_index.llms.groq import Groq
 from llama_index.core.node_parser import SentenceSplitter
 from llama_index.core import Settings
-
-import os
 from dotenv import load_dotenv
 import tempfile 
 

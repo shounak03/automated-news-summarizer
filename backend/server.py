@@ -69,6 +69,7 @@ async def get_top_headlines():
 #     except Exception as e:
 #         return {"error": str(e)}
 
+
 @app.post("/api/summarize")
 def summarize_url(request: URLRequest):
     try:
