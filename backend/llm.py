@@ -32,6 +32,6 @@ class Summarizer:
             use_async = True
         )
 
-        response = summmary_query_engine.query("Summarize the given data")
+        response = summmary_query_engine.query("provide a detailed summary of the given article content")
 
         return response
