@@ -1,7 +1,7 @@
 
 import { Route, Routes } from 'react-router-dom'
 import Summary from './components/Summary'
-import Header from './components/header'
+import Header from './components/Header'
 import Footer from './components/Footer'
 import NewsDisplay from './components/NewsPage'
 import About from './components/About'

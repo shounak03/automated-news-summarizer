@@ -9,7 +9,7 @@ function Header() {
             <div className="container mx-auto flex justify-between items-center">
                 <Link to="/" className="flex items-center space-x-2">
                     <Newspaper className="h-6 w-6 text-purple-500" />
-                    <span className="text-2xl font-bold text-purple-500">Readers.com</span>
+                    <span className="text-2xl font-bold text-purple-500">Briefly</span>
                 </Link>
                 <div className="space-x-4">
                     <Link to="/about" className="text-white hover:text-purple-400 transition-colors">

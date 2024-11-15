@@ -63,7 +63,7 @@ export default function NewsDisplay() {
 
             <div className="flex justify-center items-center text-4xl m-2 pb-2 ">
 
-                <h1 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-indigo-300">
+                <h1 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-indigo-400">
                     Latest News
                 </h1>
             </div>
@@ -82,7 +82,7 @@ export default function NewsDisplay() {
             <ScrollArea className="h-[calc(100vh-8rem)]">
                 <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
                     {data.map((article) => (
-                        <Card key={article.id} className="flex flex-col">
+                        <Card key={article.id} className="flex flex-col bg">
                             <CardHeader>
                                 <CardTitle>{article.title}</CardTitle>
                             </CardHeader>

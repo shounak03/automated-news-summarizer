@@ -1,6 +1,6 @@
 
 
-import { CSSProperties, useEffect, useState } from 'react'
+import {  useEffect, useState } from 'react'
 import { Button } from "@/components/ui/button"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Card } from "@/components/ui/card"
@@ -60,14 +60,14 @@ export default function Summary() {
         body: JSON.stringify({ url })
       });
       
-      if (!res.ok) throw new Error('Failed to fetch content');
+      if (!res.ok) throw new Error('Region-locked content, Cannot fetch');
       
       const content = await res.json();
       console.log(content);
       
       setData(content);
     } catch (error) {
-      setError(error instanceof Error ? error.message : 'Failed to fetch content');
+      setError(error instanceof Error ? error.message : 'Region-locked content, Cannot fetch');
       console.error(error);
     } finally {
       setLoading(false);
@@ -102,6 +102,14 @@ export default function Summary() {
         <Card className="p-6 bg-white">
           <h2 className="text-xl font-bold text-red-600 mb-2">Error</h2>
           <p className="text-gray-800">{error}</p>
+          <Link
+              to={url}
+              target="_blank"
+              className='text-blue-600 underline cursor-pointer'
+              rel="noopener noreferrer"
+            >
+              Article link
+            </Link><br />
           <Button onClick={getContent} className="mt-4">
             Retry
           </Button>
