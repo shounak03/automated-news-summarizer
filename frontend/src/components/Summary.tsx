@@ -11,13 +11,14 @@ interface ArticleData {
   title: string;
   content: string;
   summary: string;
+  response: string;
 }
 
 export default function Summary() {
   const location = useLocation();
   const { url } = location.state || {};
   
-  const [summary, setSummary] = useState<ArticleData[]>([]);
+  const [summary, setSummary] = useState<ArticleData>();
   const [data, setData] = useState<ArticleData | null>(null);
   const [loading, setLoading] = useState(true);
   const [loadingSummary, setLoadingSummary] = useState(false);
@@ -101,7 +102,7 @@ export default function Summary() {
       <div className="min-h-screen bg-gray-900 flex items-center justify-center">
         <Card className="p-6 bg-white">
           <h2 className="text-xl font-bold text-red-600 mb-2">Error</h2>
-          <p className="text-gray-800">{error}</p>
+          <p className="text-gray-800">Region-locked content, Cannot fetch</p>
           <Link
               to={url}
               target="_blank"

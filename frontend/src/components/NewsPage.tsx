@@ -14,6 +14,10 @@ interface Article {
     title: string;
     url: string;
     author: string;
+    source:{
+        name:string,
+        id:string
+    };
 }
 
 const override: CSSProperties = {
@@ -82,6 +86,7 @@ export default function NewsDisplay() {
             <ScrollArea className="h-[calc(100vh-8rem)]">
                 <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
                     {data.map((article) => (
+                        article?.source?.name !== "[Removed]" &&
                         <Card key={article.id} className="flex flex-col bg">
                             <CardHeader>
                                 <CardTitle>{article.title}</CardTitle>
